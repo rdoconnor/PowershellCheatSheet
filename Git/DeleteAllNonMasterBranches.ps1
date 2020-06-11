@@ -1,0 +1,1 @@
+git branch --list | Where-Object { $_ -notlike "*master" } | ForEach-Object { git branch --delete --force $_.Trim() }
